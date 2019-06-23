@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Práctica de Formularios (II)</title>
+	<style type="text/css">
+		form{
+			display: block;
+			margin:0 auto 0 auto;
+			width: 300px;
+		}
+		.etiqueta{
+			display: block;
+			width: 300px;
+			text-align: center;
+						margin:20px auto 0 auto;
+		}
+		.entrada{
+			display: block;
+			width: 300px;		
+			margin:0 auto 0 auto;
+		}
+		#satisfacion{
+			width: 50px;
+			text-align: center;
+		}
+		#calidad, #cp{
+			width: 100px;
+		}
+		 #enviar{
+		 	display: block;
+		 	width: 100px;
+		 	background: lime;
+		 	margin:20px auto 0 auto;
+		 }
+	</style>
+</head>
+<body>
+	<form method="post" action="miservidor.php">
+		<div>
+			<label class="etiqueta" for="cp">Código postal</label>
+			<input class="entrada" id="cp" type="number" name="cp">
+		</div>
+		<div>
+			<label class="etiqueta" id="etiq_satisfacion" for="satisfacion">Satisfación</label>
+			<select class="entrada" id="satisfacion">
+				<option  value="1">1</option>
+				<option  value="2">2</option>
+				<option  value="3">3</option>
+				<option  value="4">4</option>
+				<option  value="5">5</option>
+			</select>
+		</div>
+		<div>
+			<label class="etiqueta" for="email">E-mail</label>
+			<input class="entrada" type="email" name="email">
+		</div>
+		<div>
+			<label class="etiqueta" for="puntos_positivos">Puntos positivos del producto</label>
+			<textarea class="entrada" id="puntos_positivos"></textarea>
+		</div>
+		<div>
+			<label class="etiqueta" for="puntos_negativos">Puntos negativos del producto</label>
+			<textarea class="entrada" id="puntos_negativos"></textarea>
+		</div>
+		<div>
+			<label class="etiqueta" for="calidad">Calidad del servicio</label>
+			<select class="entrada" id="calidad">
+				<option  value="excelente">Excelente</option>
+				<option  value="bueno">Bueno</option>
+				<option  value="regular">Regular</option>
+				<option  value="pesimo">Pésimo</option>
+			</select>
+		</div>
+		<div>
+			<label class="etiqueta" for="calidad2">Calidad del servicio</label>
+				<input name="calidad2" type="radio" value="excelente">Excelente
+				<input name="calidad2" type="radio" value="bueno">Bueno
+				<input name="calidad2" type="radio" value="regular">Regular
+				<input name="calidad2" type="radio" value="pesimo">Pésimo
+		</div>
+		<div>
+			<input id="enviar" type="submit" name="Enviar">
+		</div>
+	</form>
+</body>
+</html>
